@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVY-ZONE</title>
+	<link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js" defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">	
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODQgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZmlsbD0iIzI2MzAzOCIgZD0iTTczIDM5Yy0xNC44LTkuMS0zMy40LTkuNC00OC41LS45UzAgNjIuNiAwIDgwTDAgNDMyYzAgMTcuNCA5LjQgMzMuNCAyNC41IDQxLjlzMzMuNyA4LjEgNDguNS0uOUwzNjEgMjk3YzE0LjMtOC43IDIzLTI0LjIgMjMtNDFzLTguNy0zMi4yLTIzLTQxTDczIDM5eiIvPjwvc3ZnPg==">
+	<meta property="og:title" content="MOVY-ZONE">
+	<meta property="og:description" content="Хүссэн киногоо Telegram-аас шууд, хялбархан үзээрэй!">
+	<meta property="og:image" content="MZS.jpg">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="MOVY-ZONE">
+	<meta name="twitter:description" content="Хүссэн киногоо Telegram-аас шууд, хялбархан үзээрэй!">
+	<meta name="twitter:image" content="MZS.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9YG8ZWXEX"></script>
+	<script>
+	function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-R9YG8ZWXEX");
+	</script>	
+	<link rel="manifest" href="manifest.json">
+	<script>
+	if("serviceWorker"in navigator){let e="/service-worker.js";window.location.hostname.includes("github.io")&&(e="/watch/service-worker.js"),navigator.serviceWorker.register(e).then(e=>{}).catch(e=>{console.error("Service Worker Registration Failed:",e)})}
+	</script>
+	<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+	<script>
+	window.OneSignalDeferred=window.OneSignalDeferred||[],OneSignalDeferred.push(function(e){let a=window.location.hostname,o,t;if("movy-zone.pages.dev"===a)o="9e7478a4-ac2f-4e92-9b2e-19624f31a110",t="web.onesignal.auto.2510e921-2066-4b3b-be25-8e0e09bd836c";else if("movy-zone.github.io"===a)o="a6bc1fa7-d37e-4382-94a6-188d880f8527",t="web.onesignal.auto.458f9dc8-6677-4788-b5a2-9d66a9d7a179";else if("movy-zone.firebaseapp.com"===a)o="1bd1af64-edc4-4f65-bda5-20753a0cc025",t="web.onesignal.auto.412ff56c-6955-417a-b410-cc97b21af240";else{if("movy-zone.web.app"!==a)return;o="e46fa6f0-5b12-4054-aa63-ab076188aedd",t="web.onesignal.auto.0912ed1f-6073-4d84-af67-68904cc10338"}window.location.hostname.includes("github.io")?(swOneSignalPath="watch/service-worker.js",e.init({appId:o,safari_web_id:t,notifyButton:{enable:!1},serviceWorkerParam:{scope:"/watch/"},serviceWorkerPath:"watch/service-worker.js",promptOptions:{slidedown:{enabled:!0,autoPrompt:!0,prompts:[{type:"push",text:{actionMessage:"Шинэ киноны мэдэгдэл авах уу?",acceptButton:"Тийм",cancelButton:"Үгүй"}}]}},welcomeNotification:{disable:!1,title:"MOVY-ZONE",message:"Амжилттай бүртгэгдлээ."}}),e.Slidedown.promptPush()):(e.init({appId:o,safari_web_id:t,notifyButton:{enable:!1},serviceWorkerPath:"./service-worker.js",promptOptions:{slidedown:{enabled:!0,autoPrompt:!0,prompts:[{type:"push",text:{actionMessage:"Шинэ киноны мэдэгдэл авах уу?",acceptButton:"Тийм",cancelButton:"Үгүй"}}]}},welcomeNotification:{disable:!1,title:"MOVY-ZONE",message:"Амжилттай бүртгэгдлээ."}}),e.Slidedown.promptPush())});
+	</script>	
+</head>
+<body>
+	<div id="loading">
+		<div class="loader"></div>
+	</div>
+	<div id="popup" class="popup-overlay" style="display: none;">
+		<div class="popup-container">
+			<button id="close-popup"><i class="fa-solid fa-xmark"></i></button>
+			<div class="popup-content">
+				<div class="popup-movie-poster"></div>
+				<div class="popup-movie-detail">
+					<h4 id="pmoviename" class="pmoviename"></h4>
+					<p id="pmoviedescription"></p>
+					<p><strong>Төрөл: </strong><span id="pmoviegenres"></span></p>
+					<p><strong>Төлөв: </strong><span id="pmovieStatus"></span></p>
+					<p><strong>Ангийн мэдээлэл: </strong><span id="pmovieEpisodeCount"></span></p>
+					<p>Та аль хэдийн MOVY-ZONE телеграм группд төлбөрөө төлөөд нэгдсэн бол <span class="pmoviename"></span>-г шууд <a id="popup-link-1" href="#" target="_blank">ЭНД ДАРЖ</a> телеграмруу орж үзээрэй.</p>
+					<h4>Хэрхэн MOVY-ZONE телерам бүлгэмд орох вэ?</h4>
+					<ol>
+						<li>Хэрвээ <b>MOVY-ZONE</b> телеграм группд нэгдэж амжаагүй бол <span><b id="bank-number">5312402101</b></span> <i class="fa-solid fa-copy copy-bank-number" style="cursor:pointer;"></i> (ХААНБАНК) дансанд утга дээр нь өөрийн телеграм нэрийг бичиж хандив болох <b>15,000₮</b> хийнэ.</li>
+						<li><a href="https://t.me/+H5mcpdUIAMk4ZGM0" target="_blank">MOVY-ZONE</a> телеграм бүлгэмд нэгдэх хүсэлт илгээнэ.</li>
+						<li>Төлбөр шалгагдсаны таны нэгдэх хүсэлтийг зөвшөөрөх болно. Та нэг удаа төлбөр төлөөд <b>MOVY-ZONE</b> сайтын бүх киног хязгааргүй үүрд үзэх боломжтой болно.</li>
+						<li>Амжилттай нэгсдэний дараа <span class="pmoviename"></span>-г шууд <a id="popup-link-2" href="#" target="_blank">ЭНД ДАРЖ</a> телеграмруу орж үзээрэй.</li>
+						<li>Танд үзэхийг хүссэн кино байвал <a href="https://www.facebook.com/MOVYZONE/" target="_blank">Facebook</a> хуудсанд маань зурвас илгээгээрэй.</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="header">
+		<a class="logo" href="#"><i class="fa-solid fa-play"></i><h1>MOVY-ZONE</h1></a>
+		<a class="facebook" href="https://www.facebook.com/MOVYZONE/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+		<div class="install-app">АПП суулгах</div>
+		<div class="reload"><i class="fa-solid fa-rotate-right"></i></div>
+	</div>
+    <div class="container">
+        <div class="filter-container">
+			<div class="filter">
+				<label for="type-selector">Төрөл:</label>
+				<select id="type-selector">
+					<option value="All">Бүгд</option>
+					<option value="Anime">Анимэ</option>
+					<option value="Mongolian">Монгол</option>
+					<option value="Korean">Солонгос</option>
+					<option value="OAK">Олон ангит</option>
+					<option value="Foreign">Гадаад</option>
+					<option value="Chinese">Хятад</option>
+					<option value="Russian">Орос</option>
+					<option value="Kids">Хүүхдийн</option>
+					<option value="Japan">Япон</option>
+					<option value="Horror">Аймшгийн</option>
+					<option value="TVShow">ТВ шоу</option>
+					<option value="Comedy">Инээдмийн</option>
+					<option value="Action">Тулаант</option>
+					<option value="Romance">Романтик</option>
+					<option value="Thriller">Түгшүүрт</option>
+					<option value="Superhero">Супер баатрын</option>
+					<option value="Drama">Драм</option>
+					<option value="Adventure">Адал явдалт</option>
+					<option value="Erotic">Эротик</option>
+					<option value="Mystery">Нууцлаг</option>
+					<option value="Crime">Гэмт хэрэг</option>
+					<option value="Fantasy">Фэнтэзи</option>
+					<option value="History">Түүхэн</option>
+				</select>
+			</div>
+			<div class="search-container">
+				<input type="text" id="search-input" placeholder="Хайх..." />
+				<button type="button" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+				<button type="button" id="cancel-search"><i class="fa-solid fa-xmark"></i></button>
+			</div>
+        </div>
+		
+		<div id="no-movie" style="display: none;">Уучлаарай кино олдсонгүй.</div>
+        <div id="movie-list"></div>
+        <div class="pagination" id="pagination"></div>
+    </div>
+	<div class="footer">MOVY-ZONE</div>
+</body>
+</html>
