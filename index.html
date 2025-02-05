@@ -23,16 +23,21 @@
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9YG8ZWXEX"></script>
 	<script>
-	function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-R9YG8ZWXEX");
+		function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-R9YG8ZWXEX");
 	</script>	
 	<link rel="manifest" href="manifest.json">
 	<script>
-	if("serviceWorker"in navigator){let e="/service-worker.js";window.location.hostname.includes("github.io")&&(e="/watch/service-worker.js"),navigator.serviceWorker.register(e).then(e=>{}).catch(e=>{console.error("Service Worker Registration Failed:",e)})}
+		if("serviceWorker"in navigator){let e="/service-worker.js";window.location.hostname.includes("github.io")&&(e="/watch/service-worker.js"),navigator.serviceWorker.register(e).then(e=>{}).catch(e=>{console.error("Service Worker Registration Failed:",e)})}
 	</script>
 	<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 	<script>
-	window.OneSignalDeferred=window.OneSignalDeferred||[],OneSignalDeferred.push(function(e){let a=window.location.hostname,o,t;if("movy-zone.pages.dev"===a)o="9e7478a4-ac2f-4e92-9b2e-19624f31a110",t="web.onesignal.auto.2510e921-2066-4b3b-be25-8e0e09bd836c";else if("movy-zone.github.io"===a)o="a6bc1fa7-d37e-4382-94a6-188d880f8527",t="web.onesignal.auto.458f9dc8-6677-4788-b5a2-9d66a9d7a179";else if("movy-zone.firebaseapp.com"===a)o="1bd1af64-edc4-4f65-bda5-20753a0cc025",t="web.onesignal.auto.412ff56c-6955-417a-b410-cc97b21af240";else{if("movy-zone.web.app"!==a)return;o="e46fa6f0-5b12-4054-aa63-ab076188aedd",t="web.onesignal.auto.0912ed1f-6073-4d84-af67-68904cc10338"}window.location.hostname.includes("github.io")?(swOneSignalPath="watch/service-worker.js",e.init({appId:o,safari_web_id:t,notifyButton:{enable:!1},serviceWorkerParam:{scope:"/watch/"},serviceWorkerPath:"watch/service-worker.js",promptOptions:{slidedown:{enabled:!0,autoPrompt:!0,prompts:[{type:"push",text:{actionMessage:"Шинэ киноны мэдэгдэл авах уу?",acceptButton:"Тийм",cancelButton:"Үгүй"}}]}},welcomeNotification:{disable:!1,title:"MOVY-ZONE",message:"Амжилттай бүртгэгдлээ."}}),e.Slidedown.promptPush()):(e.init({appId:o,safari_web_id:t,notifyButton:{enable:!1},serviceWorkerPath:"./service-worker.js",promptOptions:{slidedown:{enabled:!0,autoPrompt:!0,prompts:[{type:"push",text:{actionMessage:"Шинэ киноны мэдэгдэл авах уу?",acceptButton:"Тийм",cancelButton:"Үгүй"}}]}},welcomeNotification:{disable:!1,title:"MOVY-ZONE",message:"Амжилттай бүртгэгдлээ."}}),e.Slidedown.promptPush())});
+		window.OneSignalDeferred=window.OneSignalDeferred||[],OneSignalDeferred.push(function(e){let a=window.location.hostname,o,t;if("movy-zone.pages.dev"===a)o="9e7478a4-ac2f-4e92-9b2e-19624f31a110",t="web.onesignal.auto.2510e921-2066-4b3b-be25-8e0e09bd836c";else if("movy-zone.github.io"===a)o="a6bc1fa7-d37e-4382-94a6-188d880f8527",t="web.onesignal.auto.458f9dc8-6677-4788-b5a2-9d66a9d7a179";else if("movy-zone.firebaseapp.com"===a)o="1bd1af64-edc4-4f65-bda5-20753a0cc025",t="web.onesignal.auto.412ff56c-6955-417a-b410-cc97b21af240";else{if("movy-zone.web.app"!==a)return;o="e46fa6f0-5b12-4054-aa63-ab076188aedd",t="web.onesignal.auto.0912ed1f-6073-4d84-af67-68904cc10338"}window.location.hostname.includes("github.io")?(swOneSignalPath="watch/service-worker.js",e.init({appId:o,safari_web_id:t,notifyButton:{enable:!1},serviceWorkerParam:{scope:"/watch/"},serviceWorkerPath:"watch/service-worker.js",promptOptions:{slidedown:{enabled:!0,autoPrompt:!0,prompts:[{type:"push",text:{actionMessage:"Шинэ киноны мэдэгдэл авах уу?",acceptButton:"Тийм",cancelButton:"Үгүй"}}]}},welcomeNotification:{disable:!1,title:"MOVY-ZONE",message:"Амжилттай бүртгэгдлээ."}}),e.Slidedown.promptPush()):(e.init({appId:o,safari_web_id:t,notifyButton:{enable:!1},serviceWorkerPath:"./service-worker.js",promptOptions:{slidedown:{enabled:!0,autoPrompt:!0,prompts:[{type:"push",text:{actionMessage:"Шинэ киноны мэдэгдэл авах уу?",acceptButton:"Тийм",cancelButton:"Үгүй"}}]}},welcomeNotification:{disable:!1,title:"MOVY-ZONE",message:"Амжилттай бүртгэгдлээ."}}),e.Slidedown.promptPush())});
 	</script>	
+	<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
 	<div id="loading">
@@ -69,6 +74,16 @@
 		<div class="reload"><i class="fa-solid fa-rotate-right"></i></div>
 	</div>
     <div class="container">
+		<div class="section-separator"></div>	
+		<div class="swiper-container">
+			
+			<div class="swiper" id="featured-movies">
+				<div class="swiper-wrapper"></div>
+			</div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>			
+		</div>	
+		<div class="section-separator"></div>	
         <div class="filter-container">
 			<div class="filter">
 				<label for="type-selector">Төрөл:</label>

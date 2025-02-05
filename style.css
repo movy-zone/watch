@@ -105,7 +105,7 @@ div.install-app {
 	max-width: 1280px;
 	margin: 0 auto;
 	background: #ffffff;
-	padding: 20px;
+	padding: 0px 20px 20px 20px;
 	box-sizing: border-box;
 }
 
@@ -114,6 +114,7 @@ div.install-app {
 	display: flex;
 	margin-bottom: 20px;
 	justify-content: space-between;
+	margin-top:10px;
 }		
 
 .filter {
@@ -187,7 +188,7 @@ button#cancel-search {
 }
 
 .movie {
-	display: flex;
+	display: flex!important;
 	align-items: center;
 	flex-direction: column;
 	gap: 10px;
@@ -435,7 +436,7 @@ p#pmoviedescription {
 	
 	.filter-container {
 		flex-direction: column-reverse;
-		gap: 5px;
+		gap: 10px;
 	}	
 
 	.filter {
@@ -531,6 +532,47 @@ span.episodeCount {
 	right: 5px;
 	bottom: 35px;
 }	
+#featured-movies .swiper-slide {
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Internet Explorer */
+}
+#featured-movies .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+.swiper-container{
+	position:relative;
+	margin-bottom: 20px;
+}
+.swiper-container .swiper-button-prev:after, .swiper-container .swiper-button-next:after{
+    font-size: 10px;
+}
+.swiper-container .swiper-button-prev, .swiper-container .swiper-button-next {
+    background: #263038;
+    color: white;
+	width: 20px;
+}
+.section-separator {
+    height: 20px;
+    margin: 0 -20px 20px -20px;
+    background: #263038;
+    color: #263038;
+    padding: 0;
+}
+span.genre.featured {
+    background: #2db53f;
+}
+@media (max-width: 768px) {
+	#header {
+		border-bottom: none;
+	}	
+	.section-separator {
+		height: 1px;
+		background: #ebebeb;
+	}	
+}
 /* ==== One Signal ==== */	
 #onesignal-slidedown-container div#onesignal-slidedown-dialog{
 	background: #263038!important;
