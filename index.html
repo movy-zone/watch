@@ -34,10 +34,10 @@
 		window.OneSignalDeferred=window.OneSignalDeferred||[],OneSignalDeferred.push(function(e){let a=window.location.hostname,o,t;if("movy-zone.pages.dev"===a)o="9e7478a4-ac2f-4e92-9b2e-19624f31a110",t="web.onesignal.auto.2510e921-2066-4b3b-be25-8e0e09bd836c";else if("movy-zone.github.io"===a)o="a6bc1fa7-d37e-4382-94a6-188d880f8527",t="web.onesignal.auto.458f9dc8-6677-4788-b5a2-9d66a9d7a179";else if("movy-zone.firebaseapp.com"===a)o="1bd1af64-edc4-4f65-bda5-20753a0cc025",t="web.onesignal.auto.412ff56c-6955-417a-b410-cc97b21af240";else{if("movy-zone.web.app"!==a)return;o="e46fa6f0-5b12-4054-aa63-ab076188aedd",t="web.onesignal.auto.0912ed1f-6073-4d84-af67-68904cc10338"}window.location.hostname.includes("github.io")?(swOneSignalPath="watch/service-worker.js",e.init({appId:o,safari_web_id:t,notifyButton:{enable:!1},serviceWorkerParam:{scope:"/watch/"},serviceWorkerPath:"watch/service-worker.js",promptOptions:{slidedown:{enabled:!0,autoPrompt:!0,prompts:[{type:"push",text:{actionMessage:"Шинэ киноны мэдэгдэл авах уу?",acceptButton:"Тийм",cancelButton:"Үгүй"}}]}},welcomeNotification:{disable:!1,title:"MOVY-ZONE",message:"Амжилттай бүртгэгдлээ."}}),e.Slidedown.promptPush()):(e.init({appId:o,safari_web_id:t,notifyButton:{enable:!1},serviceWorkerPath:"./service-worker.js",promptOptions:{slidedown:{enabled:!0,autoPrompt:!0,prompts:[{type:"push",text:{actionMessage:"Шинэ киноны мэдэгдэл авах уу?",acceptButton:"Тийм",cancelButton:"Үгүй"}}]}},welcomeNotification:{disable:!1,title:"MOVY-ZONE",message:"Амжилттай бүртгэгдлээ."}}),e.Slidedown.promptPush())});
 	</script>	
 	<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 	<div id="loading"> 
@@ -47,20 +47,20 @@
 		<div class="popup-container">
 			<button id="close-popup"><i class="fa-solid fa-xmark"></i></button>
 			<div class="popup-content">
-				<div class="popup-movie-poster"></div>
+				<div class="popup-movie-poster"><a class="popup-movie-poster-watch popup-link" id="popup-link-3" href="#" target="_blank"><i class="fa-brands fa-telegram"></i> Телеграм-с үзэх</a></div>
 				<div class="popup-movie-detail">
 					<h4 id="pmoviename" class="pmoviename"></h4>
 					<p id="pmoviedescription"></p>
 					<p><strong>Төрөл: </strong><span id="pmoviegenres"></span></p>
 					<p><strong>Төлөв: </strong><span id="pmovieStatus"></span></p>
 					<p><strong>Ангийн мэдээлэл: </strong><span id="pmovieEpisodeCount"></span></p>
-					<p>Та аль хэдийн MOVY-ZONE телеграм группд хандив өгөөд нэгдсэн бол <span class="pmoviename"></span>-г шууд <a id="popup-link-1" href="#" target="_blank">ЭНД ДАРЖ</a> телеграмруу орж үзээрэй.</p>
-					<h4>Хэрхэн MOVY-ZONE телерам бүлгэмд орох вэ?</h4>
+					<p>Та аль хэдийн MOVY-ZONE Телеграм группд хандив өгөөд нэгдсэн бол <span class="pmoviename"></span>-г шууд <a class="popup-link" id="popup-link-1" href="#" target="_blank">ЭНД ДАРЖ</a> Телеграмруу орж үзээрэй.</p>
+					<h4>Хэрхэн MOVY-ZONE Телерам группд орох вэ?</h4>
 					<ol>
-						<li>Хэрвээ <b>MOVY-ZONE</b> телеграм группд нэгдэж амжаагүй бол <span><b id="bank-number">5312402101</b></span> <i class="fa-solid fa-copy copy-bank-number" style="cursor:pointer;"></i> (ХААНБАНК) дансанд утга дээр нь өөрийн телеграм нэрийг бичиж хандив болох <b>15,000₮</b> хийнэ.</li>
-						<li><a href="https://t.me/+H5mcpdUIAMk4ZGM0" target="_blank">MOVY-ZONE</a> телеграм бүлгэмд нэгдэх хүсэлт илгээнэ.</li>
+						<li>Хэрвээ <b>MOVY-ZONE</b> Телеграм группд нэгдэж амжаагүй бол <span><b id="bank-number">5312402101</b></span> <i class="fa-solid fa-copy copy-bank-number" style="cursor:pointer;"></i> (ХААНБАНК) дансанд утга дээр нь өөрийн Телеграм нэрийг бичиж хандив болох <b>15,000₮</b> хийнэ.</li>
+						<li><a href="https://t.me/+H5mcpdUIAMk4ZGM0" target="_blank">MOVY-ZONE</a> Телеграм группд нэгдэх хүсэлт илгээнэ.</li>
 						<li>Хандив шалгагдсаны таны нэгдэх хүсэлтийг зөвшөөрөх болно. Та нэг удаа хандив <b>MOVY-ZONE</b> сайтын бүх киног хязгааргүй үүрд үзэх боломжтой болно.</li>
-						<li>Амжилттай нэгсдэний дараа <span class="pmoviename"></span>-г шууд <a id="popup-link-2" href="#" target="_blank">ЭНД ДАРЖ</a> телеграмруу орж үзээрэй.</li>
+						<li>Амжилттай нэгсдэний дараа <span class="pmoviename"></span>-г шууд <a class="popup-link" id="popup-link-2" href="#" target="_blank">ЭНД ДАРЖ</a> Телеграмруу орж үзээрэй.</li>
 						<li>Танд үзэхийг хүссэн кино байвал <a href="https://www.facebook.com/MOVYZONE/" target="_blank">Facebook</a> хуудсанд маань зурвас илгээгээрэй.</li>
 					</ol>
 				</div>
