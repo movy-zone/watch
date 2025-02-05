@@ -561,7 +561,7 @@ span.episodeCount {
     color: #263038;
     padding: 0;
 }
-span.genre.featured {
+span.genre.featured { 
     background: #2db53f;
 }
 @media (max-width: 768px) {
