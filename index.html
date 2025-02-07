@@ -6,7 +6,7 @@
     <title>MOVY-ZONE</title>
 	<link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="script.js" defer></script>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">	
@@ -55,9 +55,9 @@
 					<p><strong>Төлөв: </strong><span id="pmovieStatus"></span></p>
 					<p><strong>Ангийн мэдээлэл: </strong><span id="pmovieEpisodeCount"></span></p>
 					<p>Та аль хэдийн MOVY-ZONE Телеграм группд хандив өгөөд нэгдсэн бол <span class="pmoviename"></span>-г шууд <a class="popup-link" id="popup-link-1" href="#" target="_blank">ЭНД ДАРЖ</a> Телеграмруу орж үзээрэй.</p>
-					<h4>Хэрхэн MOVY-ZONE Телерам группд орох вэ?</h4>
+					<h4>MOVY-ZONE Телеграм группд хэрхэн нэгдэх вэ?</h4>
 					<ol>
-						<li>Хэрвээ <b>MOVY-ZONE</b> Телеграм группд нэгдэж амжаагүй бол <span><b id="bank-number">5312402101</b></span> <i class="fa-solid fa-copy copy-bank-number" style="cursor:pointer;"></i> (ХААНБАНК) дансанд утга дээр нь өөрийн Телеграм нэрийг бичиж хандив болох <b>15,000₮</b> хийнэ.</li>
+						<li>Хэрвээ <b>MOVY-ZONE</b> Телеграм группд нэгдэж амжаагүй бол <span><b id="bank-number">1909289741</b></span> <i class="fa-solid fa-copy copy-bank-number" style="cursor:pointer;"></i> (ГОЛОМТ) дансанд утга дээр нь өөрийн Телеграм нэрийг бичиж хандив болох <b>15,000₮</b> хийнэ.</li>
 						<li><a href="https://t.me/+H5mcpdUIAMk4ZGM0" target="_blank">MOVY-ZONE</a> Телеграм группд нэгдэх хүсэлт илгээнэ.</li>
 						<li>Хандив шалгагдсаны таны нэгдэх хүсэлтийг зөвшөөрөх болно. Та нэг удаа хандив <b>MOVY-ZONE</b> сайтын бүх киног хязгааргүй үүрд үзэх боломжтой болно.</li>
 						<li>Амжилттай нэгсдэний дараа <span class="pmoviename"></span>-г шууд <a class="popup-link" id="popup-link-2" href="#" target="_blank">ЭНД ДАРЖ</a> Телеграмруу орж үзээрэй.</li>
@@ -69,62 +69,66 @@
 	</div>
 	<div id="header">
 		<a class="logo" href="#"><i class="fa-solid fa-play"></i><h1>MOVY-ZONE</h1></a>
+		<div class="search-container desktop-search">
+			<input type="text" class="search-input" placeholder="Хайх..." />
+			<button type="button" class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+			<button type="button" class="cancel-search"><i class="fa-solid fa-xmark"></i></button>
+		</div>	
 		<a class="facebook" href="https://www.facebook.com/MOVYZONE/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
 		<div class="install-app">АПП суулгах</div>
-		<div class="reload"><i class="fa-solid fa-rotate-right"></i></div>
+		<div class="reload"><i class="fa-solid fa-rotate-right"></i></div>		
 	</div>
+
+    <div class="menu-container">
+		<div class="topnav">
+			<ul class="menu" id="main-menu"></ul>
+		</div>
+		<div class="sidebar" id="sidebar">
+			<div class="close-btn" onclick="toggleSidebar()"><i class="fa-solid fa-xmark"></i></div>
+			<ul id="sidebar-menu"></ul>
+		</div>
+    </div>
+
+
+	
     <div class="container">
-		<div class="section-separator"></div>	
-		<div class="swiper-container">
-			
-			<div class="swiper" id="featured-movies">
-				<div class="swiper-wrapper"></div>
+		<div class="section mobile-menu-container">
+			<div class="search-container mobile-search">
+				<input type="text" class="search-input" placeholder="Хайх..." />
+				<button type="button" class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+				<button type="button" class="cancel-search"><i class="fa-solid fa-xmark"></i></button>
+			</div>	
+			<div class="mobile-type-select" onclick="toggleSidebar()">
+				<i class="fa-solid fa-bars"></i>
+				<span>Цэс</span>
 			</div>
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>			
+		</div>		
+		<div class="section swiper-container-section">
+			<div class="section-title">Онцлох</div>
+			<div class="swiper-container">
+				<div class="swiper" id="featured-movies">
+					<div class="swiper-wrapper"></div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>			
+			</div>
 		</div>	
-		<div class="section-separator"></div>	
-        <div class="filter-container">
-			<div class="filter">
-				<label for="type-selector">Төрөл:</label>
-				<select id="type-selector">
-					<option value="All">Бүгд</option>
-					<option value="Anime">Анимэ</option>
-					<option value="Mongolian">Монгол</option>
-					<option value="Korean">Солонгос</option>
-					<option value="OAK">Олон ангит</option>
-					<option value="Foreign">Гадаад</option>
-					<option value="Chinese">Хятад</option>
-					<option value="Russian">Орос</option>
-					<option value="Kids">Хүүхдийн</option>
-					<option value="Japan">Япон</option>
-					<option value="Horror">Аймшгийн</option>
-					<option value="TVShow">ТВ шоу</option>
-					<option value="Comedy">Инээдмийн</option>
-					<option value="Action">Тулаант</option>
-					<option value="Romance">Романтик</option>
-					<option value="Thriller">Түгшүүрт</option>
-					<option value="Superhero">Супер баатрын</option>
-					<option value="Drama">Драм</option>
-					<option value="Adventure">Адал явдалт</option>
-					<option value="Erotic">Эротик</option>
-					<option value="Mystery">Нууцлаг</option>
-					<option value="Crime">Гэмт хэрэг</option>
-					<option value="Fantasy">Фэнтэзи</option>
-					<option value="History">Түүхэн</option>
-				</select>
+		<div class="section">
+			<div class="section-title primary-section">Бүгд</div>
+			<div class="filter-container" style="display: none;">
+				<div class="filter" >
+					<label for="type-selector">Төрөл:</label>
+					<select id="type-selector"></select>
+				</div>
 			</div>
-			<div class="search-container">
-				<input type="text" id="search-input" placeholder="Хайх..." />
-				<button type="button" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
-				<button type="button" id="cancel-search"><i class="fa-solid fa-xmark"></i></button>
-			</div>
-        </div>
-		
-		<div id="no-movie" style="display: none;">Уучлаарай кино олдсонгүй.</div>
-        <div id="movie-list"></div>
-        <div class="pagination" id="pagination"></div>
+			
+			<div id="no-movie" style="display: none;">Уучлаарай кино олдсонгүй.</div>
+			<div id="movie-list"></div>
+			<div class="pagination" id="pagination"></div>
+		</div>	
     </div>
 	<div class="footer">MOVY-ZONE</div>
+	<div class="sidebar-overlay" id="sidebar-overlay"></div>
+	<script src="script.js" defer></script>
 </body>
 </html>
