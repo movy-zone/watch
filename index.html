@@ -55,8 +55,8 @@
 					<p><strong>Төлөв: </strong><span id="pmovieStatus"></span></p>
 					<p><strong>Ангийн мэдээлэл: </strong><span id="pmovieEpisodeCount"></span></p>
 					<p>Та аль хэдийн MOVY-ZONE Телеграм группд хандив өгөөд нэгдсэн бол <span class="pmoviename"></span>-г шууд <a class="popup-link" id="popup-link-1" href="#" target="_blank">ЭНД ДАРЖ</a> Телеграмруу орж үзээрэй.</p>
-					<h4>MOVY-ZONE Телеграм группд хэрхэн нэгдэх вэ?</h4>
-					<ol>
+					<h4 id="instructions">Үзэх заавар</h4>
+					<ol id="instructions-list">
 						<li>Хэрвээ <b>MOVY-ZONE</b> Телеграм группд нэгдэж амжаагүй бол <span><b id="bank-number">1909289741</b></span> <i class="fa-solid fa-copy copy-bank-number" style="cursor:pointer;"></i> (ГОЛОМТ) дансанд утга дээр нь өөрийн Телеграм нэрийг бичиж хандив болох <b>15,000₮</b> хийнэ.</li>
 						<li><a href="https://t.me/+H5mcpdUIAMk4ZGM0" target="_blank">MOVY-ZONE</a> Телеграм группд нэгдэх хүсэлт илгээнэ.</li>
 						<li>Хандив шалгагдсаны таны нэгдэх хүсэлтийг зөвшөөрөх болно. Та нэг удаа хандив <b>MOVY-ZONE</b> сайтын бүх киног хязгааргүй үүрд үзэх боломжтой болно.</li>
@@ -67,28 +67,30 @@
 			</div>
 		</div>
 	</div>
-	<div id="header">
-		<a class="logo" href="#"><i class="fa-solid fa-play"></i><h1>MOVY-ZONE</h1></a>
-		<div class="search-container desktop-search">
-			<input type="text" class="search-input" placeholder="Хайх..." />
-			<button type="button" class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
-			<button type="button" class="cancel-search"><i class="fa-solid fa-xmark"></i></button>
-		</div>	
-		<a class="facebook" href="https://www.facebook.com/MOVYZONE/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-		<div class="install-app">АПП суулгах</div>
-		<div class="reload"><i class="fa-solid fa-rotate-right"></i></div>		
+	<div id="header-container">
+		<div id="header">
+			<a class="logo" href="#"><i class="fa-solid fa-play"></i><h1>MOVY-ZONE</h1></a>
+			<div class="search-container desktop-search">
+				<input type="text" class="search-input" placeholder="Хайх..." />
+				<button type="button" class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+				<button type="button" class="cancel-search"><i class="fa-solid fa-xmark"></i></button>
+			</div>	
+			<a class="facebook" href="https://www.facebook.com/MOVYZONE/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+			<div class="install-app">АПП суулгах</div>
+			<div class="reload"><i class="fa-solid fa-rotate-right"></i></div>		
+		</div>
 	</div>
 
     <div class="menu-container">
 		<div class="topnav">
 			<ul class="menu" id="main-menu"></ul>
 		</div>
-		<div class="sidebar" id="sidebar">
-			<div class="close-btn" onclick="toggleSidebar()"><i class="fa-solid fa-xmark"></i></div>
-			<ul id="sidebar-menu"></ul>
-		</div>
-    </div>
 
+    </div>
+	<div class="sidebar" id="sidebar">
+		<div class="close-btn" onclick="toggleSidebar()"><i class="fa-solid fa-xmark"></i></div>
+		<ul id="sidebar-menu"></ul>
+	</div>
 
 	
     <div class="container">
